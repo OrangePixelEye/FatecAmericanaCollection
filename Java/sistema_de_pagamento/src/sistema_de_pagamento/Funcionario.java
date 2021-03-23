@@ -14,12 +14,6 @@ public class Funcionario extends Empregado
         this.departamento = departamento;
     }
     
-    
-    public void registraFalta()
-    {
-        acumulado++;
-    }
-
     @Override
     public void hollerith() 
     {
@@ -39,5 +33,10 @@ public class Funcionario extends Empregado
         //vale-coxinha
         resultado += 42;
         return resultado;
+    }
+    
+    public void registraFalta()
+    {
+        acumulado++;
     }
 }

@@ -14,11 +14,7 @@ public class Professor extends Empregado
         this.curso = curso;
         
     }
-    public void registraAulas(int qtd)
-    {
-        acumulado += qtd;
-    }
-
+    
     @Override
     public void hollerith() {
         super.hollerith();
@@ -26,12 +22,15 @@ public class Professor extends Empregado
         System.out.println("  Formula do salario: (valor_base * acumulado) + Auxilio");
     }
 
-    
-    
     @Override
     public double calculaSalario() 
     {
         double resultado = (valor_base * acumulado) + auxilioProcriacao();
         return resultado;
+    }
+    
+    public void registraAulas(int qtd)
+    {
+        acumulado += qtd;
     }
 }
