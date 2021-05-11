@@ -18,11 +18,8 @@ public class ListaCarros
     
     private Carros getCarro(int cod)
     {
-        for(Carros carro : carros)
-        {
-            if(carro != null)
-                if(carro.getId() == cod) return carro;
-        }
+        for(int i = 0; i < usando; i++)
+            if(carros[i].getId() == cod) return carros[i];
         return null;
     }
     
@@ -44,11 +41,9 @@ public class ListaCarros
     {
         Carros car = getCarro(cod);
         if(car != null)
-        {
-            car.imprimeDados();
-            return;
-        }
-        System.out.println("Car " + cod + " not found");
+           car.imprimeDados();
+        else        
+            System.out.println("Car " + cod + " not found");
     }
     
     public boolean oferta(int cod, double valor)
@@ -66,16 +61,10 @@ public class ListaCarros
     public void listagem (String title, boolean all, boolean disp)
     {
         System.out.print("\n" + title + "\n");
-        if(all)
+        for(int i = 0; i < usando; i++)
         {
-            //foreach
-            for(Carros carro : carros) carro.imprimeDados();
-            return;
-        }
-        for(Carros carro : carros)
-        {
-            if(carro != null)
-                if(carro.disponivel() == disp) carro.imprimeDados();
+            if(all || (disp == carros[i].disponivel()))
+                carros[i].imprimeDados();
         }
     }
 }
