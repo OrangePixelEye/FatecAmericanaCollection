@@ -1,2 +1,2 @@
 # FatecAmericanaCollections
-Here i will put my school codes
+Here i will put my school's codes
