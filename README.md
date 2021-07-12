@@ -11,5 +11,5 @@ I'm doing the game development course but i will put the games</br> on separate 
   🕹 It is a two players game<br> 
 🔴 Polybius<br>
   🍏 This project was created by a group called "Green Apple"<br>
-  ⏱ It is incomplete and kinda strange because the group<br> had <br>some time management issues 
+  ⏱ It is incomplete and kinda strange because the group<br> had <br>some time management issues <br>
 ⏺ I'm current working in an old game about the ocean
