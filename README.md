@@ -10,7 +10,7 @@ I'm doing the game development course but i will put the games</br> on separate 
   🕹 It is a two players game
   👨‍💻<a href="https://github.com/felipe-batista-a/unity-pong/"> Repo Link</a>
   🕹<a href="https://felipe-batista-a.github.io/unity-pong/"> Game Link</a>
-🔵 Space Race<br>
+🔵 Space Race
   🕑 I created this project to show myself how much work i can do in 1 hour
   🕹 It is a two players game
   👨‍💻<a href="https://github.com/felipe-batista-a/unity-space-race">Repo Link</a>
