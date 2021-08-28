@@ -18,8 +18,8 @@ void print_options()
     printf("\n [3] - Pesquisa a Lista......... ");
     printf("\n [4] - Alterar dados da Lista....");
     printf("\n [5] - Remover dados da Lista....");
-    printf("\n [6] - Inserir dados em lista organizada");
-    printf("\n [9] - Sair");
+    printf("\n [6] - Organizar a lista ........");
+    printf("\n [9] - Sair......................");
 }
 
 void insert(ll **list)
@@ -27,17 +27,14 @@ void insert(ll **list)
    
     ll *temp_list = (ll *)malloc(sizeof(ll));
 
-    // the first link
-    if (*list == NULL)
-    {
-        printf("\n Informe a idade da Pessoa");
-        scanf("%d", &temp_list->age);
-        printf("\n Informe o nome da Pessoa..");
-        scanf(" %s", &temp_list->name);
-        if(*list)
-            temp_list->next = *list;
-        *list = temp_list;
-    }
+    printf("\n Informe a idade da Pessoa");
+    scanf("%d", &temp_list->age);
+    printf("\n Informe o nome da Pessoa..");
+    scanf(" %s", &temp_list->name);
+    if(*list)
+        temp_list->next = *list;
+    *list = temp_list;
+    
 }
 
 void show(ll **list)
@@ -54,10 +51,53 @@ void show(ll **list)
     printf("\n\n");
     getchar(); getchar(); 
 }
-void search() {}
+
+bool is_list_null()
+{
+    return false;
+}
+
+void search(ll **list) 
+{
+    //auxiliar variables
+    char search_name[20];
+    int pos = 0;
+    //list's copy
+    ll *aux = (ll*) malloc(sizeof(ll));
+    aux = *list;
+
+    if(aux == NULL)
+    {
+        printf("lista sem itens");
+        getchar();getchar();
+        return;
+    }
+
+    //input data
+    printf("Digite o nome a ser pesquisado");
+    scanf("%s", &search_name);
+
+    while (aux != NULL)
+    {
+        pos++;
+        printf("\n Nome da Pessoa %s  tem a idade de  %d", aux->name, aux->age);
+        if(strcmp(search_name,aux->name)==0)
+        {
+            printf("%s com %d anos na posicao %d", search_name, aux->age, pos);
+            getchar();getchar();
+            return;
+        }
+        aux = aux->next;
+    }
+    printf("nome não encontrado");
+    getchar();getchar();
+}
+
 void change() {}
+
 void remove() {}
-void organize_list() {}
+
+void sort() {}
 
 int main()
 {
@@ -82,7 +122,7 @@ int main()
             show(&my_list);
             break;
         case 3:
-            search();
+            search(&my_list);
             break;
         case 4:
             change();
@@ -91,7 +131,7 @@ int main()
             remove();
             break;
         case 6:
-            organize_list();
+            sort();
             break;
         case 9:
             exit = true;
